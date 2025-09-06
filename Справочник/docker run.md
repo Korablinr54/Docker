@@ -74,3 +74,10 @@ docker inspect image_id
 docker inspect volume_name # тома
 docker inspect network_name # сети
 ```
+
+# docker logs
+`docker logs` — команда для просмотра логов работающего или остановленного контейнера.  
+**Синтаксис**:  
+```bash
+docker logs [OPTIONS] CONTAINER
+```
