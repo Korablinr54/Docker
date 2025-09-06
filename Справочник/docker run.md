@@ -30,7 +30,8 @@ bash
 
 # Проброс портов -p
 Флаг `-p` (или --publish) — один из ключевых параметров Docker, который позволяет связать порты контейнера с портами хост-системы.   
-Синтаксис: `docker run -p [HOST_PORT]:[CONTAINER_PORT] [image]`  
+**Синтаксис**: 
+`docker run -p [HOST_PORT]:[CONTAINER_PORT] [image]`  
 ```bash
 docker run -p 8080:80 nginx
 ```
@@ -48,7 +49,7 @@ docker run -p 8080:80 nginx
 
 Флаг `-v` (или --volume) предназначен для монтирования томов — обеспечения обмена файлами между хост-системой и контейнером.  
 
-Синтаксис: 
+**Синтаксис**: 
 ```bash 
 docker run -v [HOST_PATH]:[CONTAINER_PATH] [IMAGE]
 ```  
@@ -58,3 +59,18 @@ docker run -v [HOST_PATH]:[CONTAINER_PATH] [IMAGE]
 docker run -v d:/nginx.conf:/etc/nginx/nginx.conf -p 80:80 nginx
 ```
 
+# docker inspect
+`docker inspect` — мощная команда для получения детальной информации о различных объектах Docker в формате JSON. Это основной инструмент для диагностики и получения метаданных.  
+
+**Синтаксис**:  
+```bash
+docker inspect [OPTIONS] NAME|ID [NAME|ID...]
+```
+```bash
+docker inspect container_name # контейнеры
+docker inspect container_id
+docker inspect image_name # образы
+docker inspect image_id
+docker inspect volume_name # тома
+docker inspect network_name # сети
+```
