@@ -19,6 +19,22 @@ docker run -d alpine
 * Вы получаете только ID контейнера вместо его вывода  
 * Контейнер продолжает работать в фоне  
 
+# docker attach id контейнера
+Эта команда подключает ваш терминал к стандартным потокам (stdin, stdout, stderr) основного процесса внутри контейнера.  
+Синтаксис:  
+```bash
+docker attach [OPTIONS] <CONTAINER>
+```
+Пример:
+```bash
+# Запускаем контейнер в фоне
+docker run -d --name my_alpine alpine sh -c "while true; do echo 'Working...'; sleep 2; done"
+
+# Подключаемся к нему
+docker attach my_alpine
+# Вы увидите: Working... Working... Working...
+```
+
 # run -it
 Комбинация `docker run -it` — одна из самых полезных и часто используемых в работе с Docker.  
 `-i` (--interactive) - Интерактивный режим, позволяет передавать ввод с вашего терминала в контейнер.  
