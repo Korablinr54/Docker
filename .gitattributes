@@ -1,4 +1,4 @@
 *.md linguist-detectable=true
 *.md linguist-detectable=true
 *.md linguist-detectable=true
-**/*.md linguist-language=Shell
+**/*.md linguist-language=bash
