@@ -1,5 +1,5 @@
 # Исследование образа
-Для поулчения инфомрации об образае нам понадобится команда `docker image inspect id_образа`.
+Для получения информации об образе нам понадобится команда `docker image inspect`.
 ```shell
 docker image inspect busybox
 ```
@@ -57,4 +57,3 @@ docker image inspect busybox
     }
 ]
 ```
-
